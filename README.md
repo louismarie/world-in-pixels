@@ -24,6 +24,7 @@ each entry.
    python3 tools/make_map.py   # refits the map and recomputes the dot positions
    python3 build.py            # writes dist/index.html
    python3 tools/shot.py       # screenshots + checks (390 px, no JavaScript, overlaps)
+   python3 tools/og.py         # share image, only when a dot is added (then build again)
    ```
 4. Open a pull request. No time? Open an issue with the link to the map.
 
