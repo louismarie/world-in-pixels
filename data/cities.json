@@ -1,0 +1,102 @@
+{
+  "center": "paris",
+  "cities": [
+    {
+      "id": "paris", "name": "Paris", "name_en": "Paris", "country": "France", "lat": 48.8566, "lon": 2.3522,
+      "url": "https://parisenpixels.fr/", "site": "parisenpixels.fr",
+      "author": "Louis-Marie Soulard", "author_url": "https://x.com/LouisMarie_S",
+      "style": "Pixel art isométrique", "note": "Paris intra-muros, de jour, de nuit et sous la pluie, avec la circulation.",
+      "post": "https://x.com/LouisMarie_S/status/2119812506088558740"
+    },
+    {
+      "id": "londres", "name": "Londres", "name_en": "London", "country": "Royaume-Uni", "lat": 51.5074, "lon": -0.1278,
+      "url": "https://tiny.london/", "site": "tiny.london",
+      "author": "Boris Starkov", "author_url": "https://tiny.london/how/",
+      "style": "Pixel art isométrique", "note": "Tout le Grand Londres en une seule image d'environ 14 milliards de pixels.",
+      "making_of": "https://tiny.london/how/"
+    },
+    {
+      "id": "new-york", "name": "New York", "name_en": "New York", "country": "États-Unis", "lat": 40.7128, "lon": -74.006,
+      "url": "https://isometric.nyc/", "site": "isometric.nyc",
+      "author": "Andy Coenen", "author_url": "https://isometric.nyc/",
+      "style": "Pixel art isométrique", "note": "La carte qui a lancé le mouvement, citée par les auteurs de Londres et de Toronto."
+    },
+    {
+      "id": "toronto", "name": "Toronto", "name_en": "Toronto", "country": "Canada", "lat": 43.6532, "lon": -79.3832,
+      "url": "https://iso.sloptoronto.ca/", "site": "iso.sloptoronto.ca",
+      "author": "John Fewell", "author_url": "https://x.com/johnfewell",
+      "style": "Illustration isométrique", "note": "Toute la ville, dessinée sous quatre angles, avec tramways, trains et météo.",
+      "making_of": "https://iso.sloptoronto.ca/how"
+    },
+    {
+      "id": "rio", "name": "Rio de Janeiro", "name_en": "Rio de Janeiro", "country": "Brésil", "lat": -22.9068, "lon": -43.1729,
+      "url": "https://tinyrj.com/", "site": "tinyrj.com",
+      "author": "Thomas M.", "author_url": "https://x.com/xthomasms",
+      "style": "Pixel art isométrique", "note": "Rio redessinée à partir du modèle 3D de la ville, à survoler en avion ou en bateau.",
+      "post": "https://x.com/xthomasms/status/2119502852552868279"
+    },
+    {
+      "id": "singapour", "name": "Singapour", "name_en": "Singapore", "country": "Singapour", "lat": 1.3521, "lon": 103.8198,
+      "url": "https://www.yadongxie.com/lab/singapore", "site": "yadongxie.com",
+      "author": "Yadong Xie", "author_url": "https://x.com/yadong_xie",
+      "style": "Pixel art isométrique", "note": "Pixel Singapore, avec une comparaison 2016 / 2026.",
+      "post": "https://x.com/yadong_xie/status/2118328270441914654",
+      "making_of": "https://www.yadongxie.com/blog/how-pixel-singapore-was-made"
+    },
+    {
+      "id": "san-francisco", "name": "San Francisco", "name_en": "San Francisco", "country": "États-Unis", "lat": 37.7749, "lon": -122.4194,
+      "url": "https://www.yadongxie.com/lab/san-francisco", "site": "yadongxie.com",
+      "author": "Yadong Xie", "author_url": "https://x.com/yadong_xie",
+      "style": "Pixel art isométrique", "note": "Pixel San Francisco, la seconde ville du même auteur.",
+      "making_of": "https://www.yadongxie.com/blog/how-isometric-pixel-city-was-made"
+    },
+    {
+      "id": "tel-aviv", "name": "Tel Aviv-Yafo", "name_en": "Tel Aviv-Yafo", "country": "Israël", "lat": 32.0853, "lon": 34.7818,
+      "url": "https://isometricworld.dmytrokrasun.com/tel-aviv-yafo", "site": "isometricworld.dmytrokrasun.com",
+      "author": "Dmytro Krasun", "author_url": "https://x.com/DmytroKrasun",
+      "style": "Illustration isométrique", "note": "36 604 bâtiments et 230 452 arbres tirés des données ouvertes de la ville (chiffres de l'auteur).",
+      "post": "https://x.com/DmytroKrasun/status/2119841736679686222",
+      "source": "https://github.com/krasun/isometricworld"
+    },
+    {
+      "id": "varsovie", "name": "Varsovie", "name_en": "Warsaw", "country": "Pologne", "lat": 52.2297, "lon": 21.0122,
+      "url": "https://p.migdal.pl/warsaw-vibe-voxel/", "site": "p.migdal.pl",
+      "author": "Piotr Migdał", "author_url": "https://p.migdal.pl/",
+      "style": "Voxels 3D", "note": "Le centre de Varsovie en voxels d'un mètre, avec l'heure, la date et la météo au choix."
+    }
+  ],
+  "others": [
+    {
+      "id": "athenes", "name": "Athènes", "country": "Grèce", "lat": 37.9838, "lon": 23.7275,
+      "kind": "Vidéo, carte en cours", "author": "socrates", "author_url": "https://x.com/sochar__",
+      "url": "https://x.com/sochar__/status/2119897360457146554",
+      "note": "Premiers pas d'une Athènes isométrique, pas encore de carte en ligne."
+    },
+    {
+      "id": "istanbul", "name": "Istanbul", "country": "Turquie", "lat": 41.0082, "lon": 28.9784,
+      "kind": "Vidéo", "author": "Peter Gostev", "author_url": "https://x.com/petergostev",
+      "url": "https://x.com/petergostev/status/2119877733488394520",
+      "note": "Une Istanbul générée en démonstration, montrée en vidéo."
+    },
+    {
+      "id": "tokyo-shibuya", "name": "Tokyo, Shibuya", "country": "Japon", "lat": 35.6595, "lon": 139.7005,
+      "kind": "Application iOS", "author": "Charly Delaroche", "author_url": "https://x.com/Nal_uh",
+      "url": "https://apps.apple.com/us/app/anywhere-your-only-map/id6823839358",
+      "post": "https://x.com/Nal_uh/status/2119508762298040469",
+      "note": "Anywhere : le monde en petite 3D, de nuit et sous la pluie, sur iPhone."
+    },
+    {
+      "id": "tokyo-jiyugaoka", "name": "Tokyo, Jiyugaoka", "country": "Japon", "lat": 35.6076, "lon": 139.6688,
+      "kind": "Vidéo", "author": "マイペース男", "author_url": "https://x.com/mypaceotoko2021",
+      "url": "https://x.com/mypaceotoko2021/status/2119762953612529999",
+      "note": "Survol du quartier de Jiyugaoka réalisé avec PLATEAU, Blender et de l'IA."
+    },
+    {
+      "id": "petit-paris", "name": "Paris en 3D", "country": "France", "lat": 48.8566, "lon": 2.3522,
+      "kind": "Carte 3D", "author": "Pierre-Baptiste Borges", "author_url": "https://x.com/pierbapt",
+      "url": "https://petitparis.app/",
+      "post": "https://x.com/pierbapt/status/2119550971898691791",
+      "note": "Petit Paris : la capitale en 3D, à pied, en voiture ou en avion. Pas en pixels, mais de la même famille."
+    }
+  ]
+}

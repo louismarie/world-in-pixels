@@ -1,0 +1,7 @@
+{
+  "site_name": "Villes en pixels",
+  "site_url": "https://villes-en-pixels.netlify.app/",
+  "repo_url": "https://github.com/louismarie/villes-en-pixels",
+  "add_city_url": "https://github.com/louismarie/villes-en-pixels#ajouter-une-ville",
+  "description": "L'annuaire des villes dessinées en pixel art : une carte du monde centrée sur Paris, un clic par ville pour ouvrir sa carte."
+}

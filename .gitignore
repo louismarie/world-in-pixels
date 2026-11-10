@@ -1,0 +1,6 @@
+dist/
+shots/
+.cache/
+__pycache__/
+.netlify/
+.DS_Store

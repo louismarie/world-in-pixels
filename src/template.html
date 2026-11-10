@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{SITE_NAME}} : l'annuaire des villes en pixel art</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<link rel="canonical" href="{{SITE_URL}}">
+<meta property="og:title" content="{{SITE_NAME}}">
+<meta property="og:description" content="{{DESCRIPTION}}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{SITE_URL}}">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+{{CSS}}
+</style>
+</head>
+<body>
+<a class="skip" href="#villes">Aller à la liste des villes</a>
+
+<header class="top">
+  <p class="top__brand">{{SITE_NAME}}</p>
+  <nav class="top__nav" aria-label="Liens du projet">
+    <a href="#villes">Les villes</a>
+    <a href="#a-part">À part</a>
+    <a href="{{ADD_CITY_URL}}" target="_blank" rel="noopener">Ajouter une ville</a>
+    <a class="top__github" href="{{REPO_URL}}" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="titre">
+    <h1 id="titre">L'annuaire des villes en pixels</h1>
+    <p class="hero__lead">{{COUNT}} villes ont déjà leur carte en pixel art. Cliquez sur un point : la carte de la ville s'ouvre dans un nouvel onglet.</p>
+
+    <div class="map" role="group" aria-label="Carte du monde en pixels, centrée sur Paris">
+      {{MAP_WIDE}}
+      {{MAP_TALL}}
+      <ol class="pins">
+{{PINS}}
+      </ol>
+      <p class="map__legend">Paris au centre. Les distances sont resserrées au loin pour laisser de la place à l'Europe.</p>
+    </div>
+  </section>
+
+  <section class="cities" id="villes" aria-labelledby="titre-villes">
+    <h2 id="titre-villes">Les villes qui ont leur carte</h2>
+    <p class="cities__lead">Chaque carte appartient à son auteur. Ici, seulement des liens.</p>
+    <ol class="cities__list">
+{{CARDS}}
+    </ol>
+  </section>
+
+  <section class="others" id="a-part" aria-labelledby="titre-a-part">
+    <h2 id="titre-a-part">À part : pas encore de carte à explorer</h2>
+    <p class="others__lead">Des villes montrées en vidéo, en application ou en 3D. Elles rejoindront la carte quand elles auront la leur, en pixels et en ligne.</p>
+    <ul class="others__list">
+{{OTHERS}}
+    </ul>
+  </section>
+
+  <section class="contribute" id="ajouter" aria-labelledby="titre-ajouter">
+    <h2 id="titre-ajouter">Votre ville manque ?</h2>
+    <p>Le projet est open source. Une ville s'ajoute en quelques lignes dans un fichier, par une proposition sur GitHub.</p>
+    <p><a class="button" href="{{ADD_CITY_URL}}" target="_blank" rel="noopener">Ajouter une ville sur GitHub</a></p>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Un projet de <a href="https://x.com/LouisMarie_S" target="_blank" rel="noopener">Louis-Marie Soulard</a>, auteur de <a href="https://parisenpixels.fr/" target="_blank" rel="noopener">parisenpixels.fr</a>.</p>
+  <p>Fond de carte : <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a>, domaine public. Code et données sur <a href="{{REPO_URL}}" target="_blank" rel="noopener">GitHub</a>.</p>
+  <p>Les cartes, leurs noms et leurs images appartiennent à leurs auteurs.</p>
+</footer>
+</body>
+</html>
