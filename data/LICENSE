@@ -1,0 +1,19 @@
+Données de l'annuaire (data/cities.json) : Creative Commons Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/legalcode.fr
+
+Copyright (c) 2026 Louis-Marie Soulard et les contributeurs de Villes en pixels
+
+Vous pouvez copier, redistribuer et adapter cette liste, y compris à des fins commerciales, à condition de
+créditer « Villes en pixels » avec un lien vers https://github.com/louismarie/villes-en-pixels et d'indiquer
+les modifications apportées.
+
+Cette licence couvre la liste elle-même (noms, coordonnées, liens, notes). Elle ne couvre pas les cartes vers
+lesquelles la liste pointe : chaque carte, son nom et ses images appartiennent à son auteur.
+
+data/map.json est dérivé de Natural Earth (domaine public) par tools/make_map.py.
+
+---
+
+The directory data (data/cities.json) is licensed under CC BY 4.0:
+https://creativecommons.org/licenses/by/4.0/legalcode
+Credit "Villes en pixels" with a link to the repository. The linked maps belong to their authors.

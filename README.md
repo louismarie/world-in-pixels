@@ -42,4 +42,8 @@ Une ville est retirée à la demande de son auteur, ou si sa carte ne répond pl
 
 ## Licence
 
-Code sous licence MIT (voir [`LICENSE`](LICENSE)). Fond de carte : Natural Earth, domaine public.
+- Code : licence MIT (voir [`LICENSE`](LICENSE)).
+- Données de l'annuaire (`data/cities.json`) : CC BY 4.0 (voir [`data/LICENSE`](data/LICENSE)), réutilisables en
+  créditant « Villes en pixels » avec un lien vers ce dépôt.
+- Fond de carte : Natural Earth, domaine public.
+- Les cartes listées restent la propriété de leurs auteurs.
