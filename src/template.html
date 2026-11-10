@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{SITE_NAME}} : l'annuaire des villes en pixel art</title>
+<title>{{SITE_NAME}}: the directory of pixel art cities</title>
 <meta name="description" content="{{DESCRIPTION}}">
 <link rel="canonical" href="{{SITE_URL}}">
 <meta property="og:title" content="{{SITE_NAME}}">
@@ -19,75 +19,75 @@
 </style>
 </head>
 <body>
-<a class="skip" href="#villes">Aller à la liste des villes</a>
+<a class="skip" href="#cities">Skip to the list of cities</a>
 
 <header class="top">
   <p class="top__brand"><span class="top__mark" aria-hidden="true"></span>{{SITE_NAME}}</p>
-  <nav class="top__nav" aria-label="Liens du projet">
-    <a href="#villes">Les villes</a>
-    <a href="#a-part">À part</a>
-    <a href="{{ADD_CITY_URL}}" target="_blank" rel="noopener">Ajouter une ville</a>
+  <nav class="top__nav" aria-label="Project links">
+    <a href="#cities">Cities</a>
+    <a href="#others">Off the map</a>
+    <a href="{{ADD_CITY_URL}}" target="_blank" rel="noopener">Add a city</a>
     <a class="top__github" href="{{REPO_URL}}" target="_blank" rel="noopener">GitHub</a>
   </nav>
 </header>
 
 <main>
-  <section class="hero" aria-labelledby="titre">
+  <section class="hero" aria-labelledby="title">
     <div class="hero__intro">
       <div class="hero__title">
-        <p class="eyebrow">Index mondial / Pixel art</p>
-        <h1 id="titre">L'annuaire des villes en pixels</h1>
+        <p class="eyebrow">World index / Pixel art</p>
+        <h1 id="title">The directory of cities in pixels</h1>
       </div>
-      <p class="hero__lead">{{COUNT}} villes ont déjà leur carte en pixel art. Cliquez sur un point : la carte de la ville s'ouvre dans un nouvel onglet.</p>
+      <p class="hero__lead">{{COUNT}} cities already have their pixel art map. Click a dot: the city's map opens in a new tab.</p>
     </div>
 
-    <div class="map" role="group" aria-label="Carte du monde en pixels, centrée sur Paris">
-      <div class="map__hud" aria-hidden="true"><span>Monde_001</span><span>48.8566 N / 2.3522 E</span></div>
+    <div class="map" role="group" aria-label="Pixel world map, centred on Paris">
+      <div class="map__hud" aria-hidden="true"><span>World_001</span><span>48.8566 N / 2.3522 E</span></div>
       {{MAP_WIDE}}
       {{MAP_TALL}}
       <ol class="pins">
 {{PINS}}
       </ol>
-      <p class="map__legend"><span aria-hidden="true"></span>Paris au centre. Les distances sont resserrées au loin pour laisser de la place à l'Europe.</p>
+      <p class="map__legend"><span aria-hidden="true"></span>Paris at the centre. Far distances are compressed to leave room for Europe.</p>
     </div>
   </section>
 
-  <section class="cities" id="villes" aria-labelledby="titre-villes">
+  <section class="cities" id="cities" aria-labelledby="title-cities">
     <div class="section__heading">
-      <p class="eyebrow">01 / Explorer</p>
-      <h2 id="titre-villes">Les villes qui ont leur carte</h2>
-      <p class="cities__lead">Chaque carte appartient à son auteur. Ici, seulement des liens.</p>
+      <p class="eyebrow">01 / Explore</p>
+      <h2 id="title-cities">Cities that have their map</h2>
+      <p class="cities__lead">Each map belongs to its author. Here, only links.</p>
     </div>
     <ol class="cities__list">
 {{CARDS}}
     </ol>
   </section>
 
-  <section class="others" id="a-part" aria-labelledby="titre-a-part">
+  <section class="others" id="others" aria-labelledby="title-others">
     <div class="section__heading">
-      <p class="eyebrow">02 / Hors carte</p>
-      <h2 id="titre-a-part">À part : pas encore de carte à explorer</h2>
-      <p class="others__lead">Des villes montrées en vidéo, en application ou en 3D. Elles rejoindront la carte quand elles auront la leur, en pixels et en ligne.</p>
+      <p class="eyebrow">02 / Off the map</p>
+      <h2 id="title-others">Off the map: nothing to explore yet</h2>
+      <p class="others__lead">Cities shown as a video, an app or in 3D. They will join the map once they have their own, in pixels and online.</p>
     </div>
     <ul class="others__list">
 {{OTHERS}}
     </ul>
   </section>
 
-  <section class="contribute" id="ajouter" aria-labelledby="titre-ajouter">
-    <p class="eyebrow">03 / Participer</p>
+  <section class="contribute" id="add" aria-labelledby="title-add">
+    <p class="eyebrow">03 / Contribute</p>
     <div class="contribute__body">
-      <h2 id="titre-ajouter">Votre ville manque ?</h2>
-      <p>Le projet est open source. Une ville s'ajoute en quelques lignes dans un fichier, par une proposition sur GitHub.</p>
+      <h2 id="title-add">Is your city missing?</h2>
+      <p>The project is open source. Adding a city takes a few lines in one file, through a pull request on GitHub.</p>
     </div>
-    <p class="contribute__action"><a class="button" href="{{ADD_CITY_URL}}" target="_blank" rel="noopener">Ajouter une ville sur GitHub</a></p>
+    <p class="contribute__action"><a class="button" href="{{ADD_CITY_URL}}" target="_blank" rel="noopener">Add a city on GitHub</a></p>
   </section>
 </main>
 
 <footer class="foot">
-  <p>Un projet de <a href="https://x.com/LouisMarie_S" target="_blank" rel="noopener">Louis-Marie Soulard</a>, auteur de <a href="https://parisenpixels.fr/" target="_blank" rel="noopener">parisenpixels.fr</a>.</p>
-  <p>Fond de carte : <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a>, domaine public. Code et données sur <a href="{{REPO_URL}}" target="_blank" rel="noopener">GitHub</a>.</p>
-  <p>Les cartes, leurs noms et leurs images appartiennent à leurs auteurs.</p>
+  <p>A project by <a href="https://x.com/LouisMarie_S" target="_blank" rel="noopener">Louis-Marie Soulard</a>, author of <a href="https://parisenpixels.fr/" target="_blank" rel="noopener">parisenpixels.fr</a>.</p>
+  <p>Base map: <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a>, public domain. Code and data on <a href="{{REPO_URL}}" target="_blank" rel="noopener">GitHub</a>.</p>
+  <p>The maps, their names and their images belong to their authors.</p>
 </footer>
 </body>
 </html>

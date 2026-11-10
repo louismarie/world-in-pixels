@@ -1,49 +1,50 @@
-# Villes en pixels
+# World in Pixels
 
-L'annuaire des villes dessinées en pixel art. Une carte du monde en pixels, centrée sur Paris : chaque ville qui a
-sa carte est un point, un clic ouvre la carte de la ville dans un nouvel onglet.
+The directory of cities drawn in pixel art. One pixel world map, centred on Paris: every city that has its own map
+is a dot, and a click opens that city's map in a new tab.
 
-*A directory of cities drawn as pixel-art maps. One pixel world map centred on Paris; each dot opens that city's map
-in a new tab. Pull requests adding a city are welcome, in French or English.*
+Live site: https://world-in-pixels.netlify.app/
 
-Le site ne contient que des liens. Les cartes, leurs noms et leurs images appartiennent à leurs auteurs, crédités
-sur chaque fiche.
+The site only contains links. The maps, their names and their images belong to their authors, who are credited on
+each entry.
 
-## Ajouter une ville
+## Add a city
 
-1. Ajoutez une entrée dans [`data/cities.json`](data/cities.json) :
-   - dans `cities` si la ville a une carte en pixels (ou voxels, ou illustration isométrique) **navigable dans un
-     navigateur**, ouverte à tous ;
-   - dans `others` si ce n'est encore qu'une vidéo, une application ou une carte en cours.
-2. Champs d'une ville : `id`, `name`, `country`, `lat`, `lon`, `url`, `site`, `author`, `author_url`, `style`,
-   `note` (une phrase, des faits vérifiables), et au choix `post`, `making_of`, `source`, `label`
-   (`right`, `left`, `top`, `bottom` : côté de l'étiquette sur la carte).
-3. Régénérez et vérifiez :
+1. Add an entry to [`data/cities.json`](data/cities.json):
+   - in `cities` if the city has a pixel map (or voxels, or an isometric illustration) that anyone can **explore in
+     a web browser**;
+   - in `others` if it is only a video, an app or a work in progress for now.
+2. Fields: `id`, `name`, `country`, `lat`, `lon`, `url`, `site`, `author`, `author_url`, `style` (`kind` in
+   `others`), `note` (one sentence, verifiable facts), and optionally `post`, `making_of`, `source`, `label`
+   (`right`, `left`, `top`, `bottom`: which side of the dot the label sits on).
+3. Rebuild and check:
 
    ```
    pip install pillow playwright && playwright install chromium
-   python3 tools/make_map.py   # recalcule le cadrage et la position des points
-   python3 build.py            # écrit dist/index.html
-   python3 tools/shot.py       # captures + contrôles (390 px, sans JavaScript, chevauchements)
+   python3 tools/make_map.py   # refits the map and recomputes the dot positions
+   python3 build.py            # writes dist/index.html
+   python3 tools/shot.py       # screenshots + checks (390 px, no JavaScript, overlaps)
    ```
-4. Ouvrez une pull request. Pas le temps ? Ouvrez une issue avec le lien de la carte.
+4. Open a pull request. No time? Open an issue with the link to the map.
 
-Une ville est retirée à la demande de son auteur, ou si sa carte ne répond plus.
+A city is removed at its author's request, or when its map stops responding.
 
-## Comment c'est fait
+## How it works
 
-- `data/cities.json` : la seule source de vérité.
-- `tools/make_map.py` : fond Natural Earth (domaine public) projeté en azimutale équidistante centrée sur Paris,
-  avec un effet loupe (`r → r^0,5`) pour que Londres et Varsovie ne se marchent pas dessus, puis pixelisé en
-  chemins SVG. Deux cadrages : large (192×120 cellules) et haut pour les téléphones (96×120).
-- `build.py` : assemble `src/template.html`, `src/style.css` et les données en une page statique. La page marche
-  sans JavaScript : les points sont de simples liens placés en CSS.
-- `tools/shot.py` : captures et contrôles automatiques.
+- `data/cities.json`: the single source of truth.
+- `tools/make_map.py`: Natural Earth land (public domain) in an azimuthal equidistant projection centred on Paris,
+  with a lens effect (`r → r^0.5`) so that London and Warsaw do not sit on top of each other, then rasterised into
+  SVG paths. Two framings: wide (192×120 cells) and tall for phones (96×120).
+- `build.py`: assembles `src/template.html`, `src/style.css` and the data into one static page. The page works
+  without JavaScript: the dots are plain links positioned with CSS.
+- `tools/shot.py`: screenshots and automatic checks.
 
-## Licence
+## License
 
-- Code : licence MIT (voir [`LICENSE`](LICENSE)).
-- Données de l'annuaire (`data/cities.json`) : CC BY 4.0 (voir [`data/LICENSE`](data/LICENSE)), réutilisables en
-  créditant « Villes en pixels » avec un lien vers ce dépôt.
-- Fond de carte : Natural Earth, domaine public.
-- Les cartes listées restent la propriété de leurs auteurs.
+- Code: MIT (see [`LICENSE`](LICENSE)).
+- Directory data (`data/cities.json`): CC BY 4.0 (see [`data/LICENSE`](data/LICENSE)). Reuse it with a credit to
+  "World in Pixels" and a link to this repository.
+- Base map: Natural Earth, public domain.
+- The listed maps remain the property of their authors.
+
+A project by [Louis-Marie Soulard](https://x.com/LouisMarie_S), author of [parisenpixels.fr](https://parisenpixels.fr/).

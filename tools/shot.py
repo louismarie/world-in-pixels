@@ -68,11 +68,11 @@ def main():
                 bad = [c["href"] for c in r["cards"] if c["target"] != "_blank" or "noopener" not in c["rel"]]
                 if bad:
                     problems.append(f"card links without new tab: {bad}")
-                print(name, f"{len(r['pins'])} pins, {len(r['cards'])} titres", "OK" if not problems else json.dumps(problems, ensure_ascii=False))
+                print(name, f"{len(r['pins'])} pins, {len(r['cards'])} headings", "OK" if not problems else json.dumps(problems, ensure_ascii=False))
                 ok = ok and not problems
             else:
                 n = pg.locator(".pins a.pin").count()
-                print(name, f"{n} pins sans JS", "OK" if n else "AUCUN PIN")
+                print(name, f"{n} pins without JS", "OK" if n else "AUCUN PIN")
                 ok = ok and n > 0
             ctx.close()
         b.close()
