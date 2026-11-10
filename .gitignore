@@ -4,3 +4,5 @@ shots/
 __pycache__/
 .netlify/
 .DS_Store
+design/kimi-out.txt
+design/kimi-err.log

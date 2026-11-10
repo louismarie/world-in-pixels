@@ -1,6 +1,6 @@
 # Brief design : Villes en pixels
 
-Tu es le designer de ce site. Dossier : `/Users/lm/git/000PERSO/villes-en-pixels`. Écris en français.
+Tu es le designer de ce site. Dossier : la racine du dépôt. Écris en français.
 
 ## Le site
 Un annuaire des villes dessinées en pixel art. La page principale est une carte du monde en pixels, centrée sur
@@ -46,7 +46,7 @@ cartes à coins arrondis et ombres douces génériques, emojis, tirets cadratins
 
 ## Vérifie ton rendu toi-même, puis itère
 ```
-cd /Users/lm/git/000PERSO/villes-en-pixels && python3 build.py && python3 tools/shot.py
+python3 build.py && python3 tools/shot.py
 ```
 Le script écrit `shots/desktop.png`, `shots/phone.png`, `shots/*-full.png`, `shots/*-nojs.png` et vérifie : pas de
 débordement horizontal à 390 px, points et étiquettes dans la carte, aucun chevauchement entre points et

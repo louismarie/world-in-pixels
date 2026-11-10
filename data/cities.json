@@ -2,14 +2,14 @@
   "center": "paris",
   "cities": [
     {
-      "id": "paris", "name": "Paris", "name_en": "Paris", "country": "France", "lat": 48.8566, "lon": 2.3522,
+      "id": "paris", "name": "Paris", "name_en": "Paris", "country": "France", "lat": 48.8566, "lon": 2.3522, "label": "bottom",
       "url": "https://parisenpixels.fr/", "site": "parisenpixels.fr",
       "author": "Louis-Marie Soulard", "author_url": "https://x.com/LouisMarie_S",
       "style": "Pixel art isométrique", "note": "Paris intra-muros, de jour, de nuit et sous la pluie, avec la circulation.",
       "post": "https://x.com/LouisMarie_S/status/2119812506088558740"
     },
     {
-      "id": "londres", "name": "Londres", "name_en": "London", "country": "Royaume-Uni", "lat": 51.5074, "lon": -0.1278,
+      "id": "londres", "name": "Londres", "name_en": "London", "country": "Royaume-Uni", "lat": 51.5074, "lon": -0.1278, "label": "left",
       "url": "https://tiny.london/", "site": "tiny.london",
       "author": "Boris Starkov", "author_url": "https://tiny.london/how/",
       "style": "Pixel art isométrique", "note": "Tout le Grand Londres en une seule image d'environ 14 milliards de pixels.",
@@ -22,21 +22,21 @@
       "style": "Pixel art isométrique", "note": "La carte qui a lancé le mouvement, citée par les auteurs de Londres et de Toronto."
     },
     {
-      "id": "toronto", "name": "Toronto", "name_en": "Toronto", "country": "Canada", "lat": 43.6532, "lon": -79.3832,
+      "id": "toronto", "name": "Toronto", "name_en": "Toronto", "country": "Canada", "lat": 43.6532, "lon": -79.3832, "label": "left",
       "url": "https://iso.sloptoronto.ca/", "site": "iso.sloptoronto.ca",
       "author": "John Fewell", "author_url": "https://x.com/johnfewell",
       "style": "Illustration isométrique", "note": "Toute la ville, dessinée sous quatre angles, avec tramways, trains et météo.",
       "making_of": "https://iso.sloptoronto.ca/how"
     },
     {
-      "id": "rio", "name": "Rio de Janeiro", "name_en": "Rio de Janeiro", "country": "Brésil", "lat": -22.9068, "lon": -43.1729,
+      "id": "rio", "name": "Rio de Janeiro", "name_en": "Rio de Janeiro", "country": "Brésil", "lat": -22.9068, "lon": -43.1729, "label": "top",
       "url": "https://tinyrj.com/", "site": "tinyrj.com",
       "author": "Thomas M.", "author_url": "https://x.com/xthomasms",
       "style": "Pixel art isométrique", "note": "Rio redessinée à partir du modèle 3D de la ville, à survoler en avion ou en bateau.",
       "post": "https://x.com/xthomasms/status/2119502852552868279"
     },
     {
-      "id": "singapour", "name": "Singapour", "name_en": "Singapore", "country": "Singapour", "lat": 1.3521, "lon": 103.8198,
+      "id": "singapour", "name": "Singapour", "name_en": "Singapore", "country": "Singapour", "lat": 1.3521, "lon": 103.8198, "label": "left",
       "url": "https://www.yadongxie.com/lab/singapore", "site": "yadongxie.com",
       "author": "Yadong Xie", "author_url": "https://x.com/yadong_xie",
       "style": "Pixel art isométrique", "note": "Pixel Singapore, avec une comparaison 2016 / 2026.",
@@ -51,7 +51,7 @@
       "making_of": "https://www.yadongxie.com/blog/how-isometric-pixel-city-was-made"
     },
     {
-      "id": "tel-aviv", "name": "Tel Aviv-Yafo", "name_en": "Tel Aviv-Yafo", "country": "Israël", "lat": 32.0853, "lon": 34.7818,
+      "id": "tel-aviv", "name": "Tel Aviv-Yafo", "name_en": "Tel Aviv-Yafo", "country": "Israël", "lat": 32.0853, "lon": 34.7818, "label": "bottom",
       "url": "https://isometricworld.dmytrokrasun.com/tel-aviv-yafo", "site": "isometricworld.dmytrokrasun.com",
       "author": "Dmytro Krasun", "author_url": "https://x.com/DmytroKrasun",
       "style": "Illustration isométrique", "note": "36 604 bâtiments et 230 452 arbres tirés des données ouvertes de la ville (chiffres de l'auteur).",
@@ -59,7 +59,7 @@
       "source": "https://github.com/krasun/isometricworld"
     },
     {
-      "id": "varsovie", "name": "Varsovie", "name_en": "Warsaw", "country": "Pologne", "lat": 52.2297, "lon": 21.0122,
+      "id": "varsovie", "name": "Varsovie", "name_en": "Warsaw", "country": "Pologne", "lat": 52.2297, "lon": 21.0122, "label": "top",
       "url": "https://p.migdal.pl/warsaw-vibe-voxel/", "site": "p.migdal.pl",
       "author": "Piotr Migdał", "author_url": "https://p.migdal.pl/",
       "style": "Voxels 3D", "note": "Le centre de Varsovie en voxels d'un mètre, avec l'heure, la date et la météo au choix."

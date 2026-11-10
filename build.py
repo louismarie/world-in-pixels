@@ -9,8 +9,12 @@ with CSS custom properties (--x/--y for the wide map, --xt/--yt for the tall one
 """
 import html
 import json
+import re
 import shutil
 from pathlib import Path
+from urllib.parse import urlparse
+
+LABELS = {"right", "left", "top", "bottom"}
 
 ROOT = Path(__file__).resolve().parent
 SITE = json.loads((ROOT / "site.json").read_text())
@@ -21,6 +25,26 @@ EXT = 'target="_blank" rel="noopener"'
 
 def e(s):
     return html.escape(str(s), quote=True)
+
+
+def validate():
+    """cities.json is edited by contributors: refuse anything that is not plain data."""
+    ids = set()
+    for c in DATA["cities"] + DATA["others"]:
+        assert re.fullmatch(r"[a-z0-9-]+", c["id"]) and c["id"] not in ids, f"bad or duplicate id: {c['id']!r}"
+        ids.add(c["id"])
+        assert c.get("label", "right") in LABELS, f"{c['id']}: label must be one of {sorted(LABELS)}"
+        assert -90 <= float(c["lat"]) <= 90 and -180 <= float(c["lon"]) <= 180, f"{c['id']}: bad coordinates"
+        for key in ("url", "author_url", "post", "making_of", "source"):
+            if key in c:
+                u = urlparse(c[key])
+                assert u.scheme == "https" and u.netloc, f"{c['id']}: {key} must be an https:// URL"
+    for L in MAP["layouts"].values():
+        L["w"], L["h"] = int(L["w"]), int(L["h"])
+        for key in ("land", "coast", "cliff"):
+            assert re.fullmatch(r"[Mhvz0-9 \-]*", L[key]), f"map.json: unexpected characters in {key}"
+        for p in L["pos"].values():
+            p["x"], p["y"] = float(p["x"]), float(p["y"])
 
 
 def svg(name):
@@ -85,7 +109,8 @@ def others():
 
 
 def main():
-    page = (ROOT / "src" / "template.html").read_text()
+    validate()
+    page =(ROOT / "src" / "template.html").read_text()
     values = {
         "MAP_WIDE": svg("wide"), "MAP_TALL": svg("tall"), "PINS": pins(), "CARDS": cards(), "OTHERS": others(),
         "COUNT": len(DATA["cities"]), "COUNT_OTHERS": len(DATA["others"]),

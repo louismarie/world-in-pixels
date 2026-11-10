@@ -11,6 +11,9 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{SITE_URL}}">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 <style>
 {{CSS}}
 </style>
@@ -19,7 +22,7 @@
 <a class="skip" href="#villes">Aller à la liste des villes</a>
 
 <header class="top">
-  <p class="top__brand">{{SITE_NAME}}</p>
+  <p class="top__brand"><span class="top__mark" aria-hidden="true"></span>{{SITE_NAME}}</p>
   <nav class="top__nav" aria-label="Liens du projet">
     <a href="#villes">Les villes</a>
     <a href="#a-part">À part</a>
@@ -30,39 +33,54 @@
 
 <main>
   <section class="hero" aria-labelledby="titre">
-    <h1 id="titre">L'annuaire des villes en pixels</h1>
-    <p class="hero__lead">{{COUNT}} villes ont déjà leur carte en pixel art. Cliquez sur un point : la carte de la ville s'ouvre dans un nouvel onglet.</p>
+    <div class="hero__intro">
+      <div class="hero__title">
+        <p class="eyebrow">Index mondial / Pixel art</p>
+        <h1 id="titre">L'annuaire des villes en pixels</h1>
+      </div>
+      <p class="hero__lead">{{COUNT}} villes ont déjà leur carte en pixel art. Cliquez sur un point : la carte de la ville s'ouvre dans un nouvel onglet.</p>
+    </div>
 
     <div class="map" role="group" aria-label="Carte du monde en pixels, centrée sur Paris">
+      <div class="map__hud" aria-hidden="true"><span>Monde_001</span><span>48.8566 N / 2.3522 E</span></div>
       {{MAP_WIDE}}
       {{MAP_TALL}}
       <ol class="pins">
 {{PINS}}
       </ol>
-      <p class="map__legend">Paris au centre. Les distances sont resserrées au loin pour laisser de la place à l'Europe.</p>
+      <p class="map__legend"><span aria-hidden="true"></span>Paris au centre. Les distances sont resserrées au loin pour laisser de la place à l'Europe.</p>
     </div>
   </section>
 
   <section class="cities" id="villes" aria-labelledby="titre-villes">
-    <h2 id="titre-villes">Les villes qui ont leur carte</h2>
-    <p class="cities__lead">Chaque carte appartient à son auteur. Ici, seulement des liens.</p>
+    <div class="section__heading">
+      <p class="eyebrow">01 / Explorer</p>
+      <h2 id="titre-villes">Les villes qui ont leur carte</h2>
+      <p class="cities__lead">Chaque carte appartient à son auteur. Ici, seulement des liens.</p>
+    </div>
     <ol class="cities__list">
 {{CARDS}}
     </ol>
   </section>
 
   <section class="others" id="a-part" aria-labelledby="titre-a-part">
-    <h2 id="titre-a-part">À part : pas encore de carte à explorer</h2>
-    <p class="others__lead">Des villes montrées en vidéo, en application ou en 3D. Elles rejoindront la carte quand elles auront la leur, en pixels et en ligne.</p>
+    <div class="section__heading">
+      <p class="eyebrow">02 / Hors carte</p>
+      <h2 id="titre-a-part">À part : pas encore de carte à explorer</h2>
+      <p class="others__lead">Des villes montrées en vidéo, en application ou en 3D. Elles rejoindront la carte quand elles auront la leur, en pixels et en ligne.</p>
+    </div>
     <ul class="others__list">
 {{OTHERS}}
     </ul>
   </section>
 
   <section class="contribute" id="ajouter" aria-labelledby="titre-ajouter">
-    <h2 id="titre-ajouter">Votre ville manque ?</h2>
-    <p>Le projet est open source. Une ville s'ajoute en quelques lignes dans un fichier, par une proposition sur GitHub.</p>
-    <p><a class="button" href="{{ADD_CITY_URL}}" target="_blank" rel="noopener">Ajouter une ville sur GitHub</a></p>
+    <p class="eyebrow">03 / Participer</p>
+    <div class="contribute__body">
+      <h2 id="titre-ajouter">Votre ville manque ?</h2>
+      <p>Le projet est open source. Une ville s'ajoute en quelques lignes dans un fichier, par une proposition sur GitHub.</p>
+    </div>
+    <p class="contribute__action"><a class="button" href="{{ADD_CITY_URL}}" target="_blank" rel="noopener">Ajouter une ville sur GitHub</a></p>
   </section>
 </main>
 
